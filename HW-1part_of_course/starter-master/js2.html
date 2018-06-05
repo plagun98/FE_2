@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS2</title>
+    <link rel="stylesheet" href="build/css/weather.css">
+</head>
+<body>
+    <div id="weather">
+        <div class="weather__header">
+            <div class="current__weather">
+                <div class="weather__icon">
+                    <img id="weather__icon" src="">
+                </div>
+                <div id="weather__value" class="weather__value"></div>
+                <div id="weather__city" class="weather__city"></div>
+                <div id="weather__time" class="weather__time"></div>
+                <div id="timeOnClick" class="timeOnClick"></div>
+            </div>
+        </div>
+        <div class="weather__body">
+            <div id="weather__list" class="weather__list"></div>
+        </div>
+        <div class="weather__footer">
+
+        </div>
+    </div>
+    <select name="city" id="city">
+        <option value="0">мое местоположение</option>
+        <option value="Kiev">Киев</option>
+        <option value="Lviv">Львов</option>
+        <option value="Odessa">Одесса</option>
+    </select>
+    <script src="/build/js/scripts.min.js"></script>
+</body>
+</html>

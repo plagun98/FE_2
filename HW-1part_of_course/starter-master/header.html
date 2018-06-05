@@ -1,0 +1,96 @@
+<header>
+        <div class="container">
+            <div class="navigation">
+                <a href="/" class="navigation__col__logo">
+                    <img src="/build/img/logo.png" alt="">
+                </a>
+                <div class="menu">
+                        <div class="first__col">
+                            <ul class="menu__line">
+                                <li><a href="#">Kyiv, str. Svobody 16/60</a></li>
+                                <li><a href="#">+380932233635</a></li>
+                            </ul>
+                        </div>
+                        <div class="last__col">
+                            <ul class="menu__line2">
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Проекты</a></li>
+                                <li><a href="#">Лицензии</a></li>
+                                <li><a href="#">Документация</a></li>
+                                <li><a href="#">Тендеры и закупки</a></li>
+                                <li><a href="#">Контакты</a></li>                                                              
+                            </ul>
+                        </div>
+                </div>    
+            </div>
+        </div>
+    </header>
+	
+	 @import "variables";
+ @import "normalize";
+
+
+ * {
+     margin: 0; 
+     padding: 0;
+     box-sizing: border-box;
+ }
+ a {
+     color: currentColor;
+ }
+
+ html {
+     font-size: 10px;
+     background-color: #212121;
+ }
+
+ .container {
+     width: 100%;
+     max-width: 1260px;
+     margin: 0 auto;
+ }
+
+ .navigation{
+     display: flex;
+     &__col__logo{
+         width: 100%;
+         max-width: 320px;
+         background-color: #ffee91;
+         padding: 40px 25px;
+         img{
+             display: block;
+         }
+     }
+ }
+
+ .menu__line{
+     display: flex;
+     height: 72px;
+     justify-content: flex-end;
+     a{
+         font-size: 1.45rem;
+         font-weight: 500;
+         text-align: left;
+         color:#818181;
+     }
+
+ }
+
+ .menu__line2{
+    display: flex;
+    height: 72px;
+    //opacity: 0.6;
+    //background-color: #212121;
+    justify-content: space-around;
+    a{
+        font-size: 1.45rem;
+        font-weight: 500;
+        text-align: left;
+        color:#818181;
+    }
+
+}
+.menu{
+    width: 100%;
+    max-width: 1260px;
+}

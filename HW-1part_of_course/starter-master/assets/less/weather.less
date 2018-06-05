@@ -1,0 +1,68 @@
+@import "normalize";
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+#weather {
+    width: 400px;
+    border: 1px solid rgba(0,0,0,0.6);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.current__weather{
+    display: flex;
+    align-items: center;
+    .weather__icon{
+        margin-right: 1rem;
+    }
+    .weather__value{
+        font-size: 2rem;
+        font-weight: 600;
+        margin-right: 1rem;
+    }
+}
+
+.weather__city{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.weather__time{
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+.weather__list{
+    display: flex;
+    max-width: 100%;
+    overflow-x: scroll;
+    div{
+        font-size: 1.6rem;
+        padding: 1.5rem 1rem;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover{
+            background-color: rgba(0,0,0,0.2);
+        }
+    }
+}
+.timeOnClick{
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+select{
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
