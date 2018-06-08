@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var subject = [];
+        level:{
+            for(var i=0; i<5; i++){
+                subject[i] = prompt("Input the mark of subject " + (i+1));
+                if (+subject[i]>=60 && +subject[i]<=100){
+                    continue;
+                } else {
+                    alert("Exam not passed or invalid mark");
+                    break level;
+                }
+            }
+            alert("All exams are passed");
+        }
+        function calculator(){
+            var a = parseInt(prompt("Input first number"));
+        if(typeof(a) == "number"){
+            var FirstNumb = +a;
+        } else {
+            alert("Input a valid number");
+        }
+        var b = parseInt(prompt("Input second number"));
+        if(typeof(b) == "number"){
+            var SecondNumb = +b;
+        } else {
+            alert("Input a valid number");
+        }
+        var c = prompt("Input operation");
+        console.log(c);
+        var result;
+            switch(c){
+                case "+": result = FirstNumb + SecondNumb;
+                    break;
+                case "-": result = FirstNumb - SecondNumb;
+                    break;
+                case "/": result = FirstNumb / SecondNumb;
+                    break;
+                case "*": result = FirstNumb * SecondNumb;
+                    break;
+                default: alert("Invalid operation");
+            }
+        alert(result);
+        }
+        level2:{
+            for(;;){
+                switch(prompt("Continue? y/n")){
+                case "y": calculator();
+                    continue;
+                case "n": break level2;
+                }
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
