@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var mark = parseInt(prompt("Input your points to get your mark"));
+        if(typeof(mark) == "number"){
+            if(mark>=0 && mark<=100){
+                if(mark<=59) {alert("Your mark is Fx. Try harder");}
+                else if(mark>=60 && mark<=64) {alert("Your mark is E");}
+                else if(mark>=65 && mark<=74) {alert("Your mark is D");}
+                else if(mark>=75 && mark<=84) {alert("Your mark is C");}
+                else if(mark>=85 && mark<=94) {alert("Your mark is B");}
+                else {alert("Your mark is A");}
+            } else {
+                alert("Invaild mark");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
