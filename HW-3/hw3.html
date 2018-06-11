@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container">
+            <div id="task1"></div>
+            <div id="task01"></div>
+            <div id="task2"></div>
+            <div id="task02"></div>
+    </div>
+    <script>
+        //task1
+        var one = document.getElementById("task1");
+        for(var i=1;i<=25;i++){    
+            one.innerHTML += i+'<br>';
+        }
+        var j=26;
+        var two = document.getElementById("task01");
+        while(j<=50){
+            two.innerHTML += j+'<br>';
+            j++;
+        }
+        //task2
+        var lang = prompt("ru/en");
+        var arr;
+        var task2 = document.getElementById("task2");
+        if(lang == "ru"){
+            arr=["Ponedelnik","Vtornik","Sreda","4etverg","Piatnica","Subbota","Voskresenie"];
+            task2.innerHTML+=arr+'<br>';
+        }else if(lang == "en"){
+            arr=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+            task2.innerHTML+=arr+'<br>';
+        }else{
+            alert("undefined value");
+        }
+        ///// with switch
+        switch(lang){
+            case "ru": arr=["Ponedelnik","Vtornik","Sreda","4etverg","Piatnica","Subbota","Voskresenie"];
+            task2.innerHTML+=arr+'<br>';
+            break;
+            case "en": arr=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+            task2.innerHTML+=arr+'<br>';
+            break;
+            default: alert("undefined value");
+        }
+        ///// without if or switch
+        var matrix = {
+            ru: arrRu=["Ponedelnik","Vtornik","Sreda","4etverg","Piatnica","Subbota","Voskresenie"],
+            en: arrEng=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+        }
+        var new2 = document.getElementById("task02");
+        new2.innerHTML += matrix.ru+ '<br>' + matrix.en;
+    </script>
+</body>
+</html>
+<style>
+     .container {
+     display: flex;
+     justify-content: space-around;
+     width: 100%;
+     margin: 0 auto;
+ }
+ #task1{
+    margin-right: -200px;
+ }
+</style>
