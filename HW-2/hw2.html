@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework</title>
+    <script>
+            // task1
+            var task1 = +prompt("Task 1","Type 0 for true");
+            if(!task1) {
+                alert("true");
+            } else{
+                alert("false");
+            }
+            //task2
+            var task2 = +prompt("Task 2", "Type (0;5) for true");
+            if(task2>0 && task2<5){
+                alert("true");
+            } else {
+                alert("false");
+            }
+            // task3
+            var arr = [];
+            for(var i=0;i<=10;i++){
+                arr[i]=Math.pow(2,i);
+            }
+            alert(arr);
+            //task4
+            var task4 = Math.sqrt(+prompt("Task 4 - Sqrt calc"));
+            alert(task4);
+            //task5
+            var arr = [4,-2,5,19,-130,0,10];
+            var positionOfMax;
+            var res = {max: -Infinity, position: 0};
+            function findMaxOfArray(array,res){
+                res.max = array[0];
+                console.log(res.max);
+                for(var i=1;i<array.length;i++){
+                    if(array[i]>res.max){
+                        res.max=array[i];
+                        res.position = i;
+                    }
+                }
+                return res;
+            }
+            var maxOfArray = findMaxOfArray(arr,res);
+            alert("Max number "+res.max+" was found at position "+res.position);
+        </script>
+</head>
+<body>
+
+</body>
+</html>
