@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+
+<div id="lab"></div>
+
+        <script>
+                var arr =[{},{},{},{},{}];
+                lab = document.getElementById("lab");
+                function CreateCar(car){
+                    car.FirmName = prompt("Firm");
+                    car.ModelName = prompt("Model");
+                    car.Engine = prompt("Engine");
+                }
+                function OutputCar(obj,div){
+                    div.innerHTML+=obj.FirmName + " " + obj.ModelName + " " + obj.Engine + '<br>';
+                }
+                for(var i=0;i<5;i++){
+                    if(prompt("Create one more car?(y/n)") == "y"){
+                        CreateCar(arr[i]);
+                        OutputCar(arr[i],lab);
+                    }
+                    else {break;}
+                }
+                lab.innerHTML+="And now only 2.0 and more engines:" + '<br>';
+                for(var i=0;i<5;i++){
+                        if(arr[i].Engine > 2){
+                            OutputCar(arr[i],lab);
+                        }
+                }
+                
+
+            </script>   
+</body>
+</html>
