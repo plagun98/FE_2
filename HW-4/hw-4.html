@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework</title>
+</head>
+<script>
+    // task1
+function confirmAge(){
+    var age = prompt('How old are you?');
+    if(age<18){
+        return confirm('Are you sure you are allowed to watch this?');
+    }
+}
+var boolAge = confirmAge();
+console.log(boolAge);
+    // task2
+function addClass(obj,cls){
+    if(!obj.classList.contains(cls)){
+        obj.classList.add(cls);
+    }
+}
+    // task3
+var firstArr = [];
+var size = prompt("Enter size of array");
+for(var i = 0;i<size;i++){
+    firstArr[i] = 1;
+}
+alert(firstArr);
+function getSums(arr){
+    var sum = arr[0];
+    for(var i=1;i<arr.length;i++){
+        sum += arr[i];
+        arr[i]=sum;
+    }
+}
+getSums(firstArr);
+alert(firstArr);
+    //task4
+var person = new Object();
+person.name = "Vasiliy";
+person.surname = "Petrov";
+console.log(person.name + " " + person.surname);
+person.name = "Serhiy";
+console.log(person.name + " " + person.surname);
+delete person.name;
+console.log(person.name + " " + person.surname);
+    // task5
+var salaries = {
+    one: 100,
+    two: 150,
+    three: 75
+};
+var empty = {};
+var sum =0;
+var s = 0;
+function sumOfSalaries(obj,summary){
+    for(var item in obj){
+    summary += obj[item];    
+    }
+    alert(summary);
+}
+sumOfSalaries(salaries,sum);
+sumOfSalaries(empty,s);
+</script>
+<body>
+   
+</body>
+</html>
