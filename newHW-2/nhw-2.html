@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="forOpen">
+            <p>Open</p>
+        </button>
+        <button id="forClose">
+            <p>Close</p>
+        </button>
+        <button id="forPrint">
+            <p>Print</p>
+        </button>
+    </div>
+
+    <script>
+    function getDocumentScroll(w){
+        w.onscroll = console.log(w.scrollY);
+    }
+    
+    var buttonForOpen = document.getElementById('forOpen');
+    var newWindow;
+    buttonForOpen.addEventListener('click',function(){
+        newWindow = window.open("http://football.ua","","width=300, height=300");
+        getDocumentScroll(newWindow);
+    },true);
+
+    var buttonForClose = document.getElementById('forClose');
+    buttonForClose.addEventListener('click',function(){
+        newWindow.focus();
+        newWindow.close();
+    },true);
+
+    var buttonForPrint = document.getElementById('forPrint');
+    buttonForPrint.addEventListener('click',function(){
+        window.print();
+    },true);
+    /////
+    
+    </script>
+</body>
+</html>
