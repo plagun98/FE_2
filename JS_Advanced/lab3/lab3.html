@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="results"></div>
+    <script>
+        var response = [
+            {question:"What is your name?", type:"input"},
+            {question:"Are you working?", type:"select", answers:["yes","no"]},
+            {question:"Will you be on occupation on Saturday?", type:"select", answers:["yes","no","may be"]}
+        ];
+
+        var res = document.getElementById("results");
+        var name = prompt(response[0].question);
+        res.innerHTML += "name: " + name + "</br>";
+        var employed = prompt(response[1].question);
+        res.innerHTML += "employed: " + employed + "</br>";
+        var present = prompt(response[2].question);
+        res.innerHTML += "presence: " + present + "</br>";
+        
+    </script>
+</body>
+</html>
