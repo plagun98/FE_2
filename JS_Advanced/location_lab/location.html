@@ -7,9 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-
+    <div id="content"></div>
     <script>
-           
+        var url1 = 'https://lms.mainacad.com/mod/book/view.php?id=5851&chapterid=25211';
+        var url2 = 'https://www.google.com.ua/search?q=location.search+js&oq=location.search+js&aqs=chrome..69i57j69i60j0l4.606j0j4&sourceid=chrome&ie=UTF-8';
+        var div = document.getElementById("content");
+        function urlArgs(url){
+            div.innerHTML += "</br>" + "URL: "+ url +"</br>";
+            var args={};
+            var query = url.split("?");
+            var pairs = query[1].split("&");
+
+            for(var i=0;i<pairs.length;i++){
+                var pos = pairs[i].indexOf('=');
+                if(pos == -1) continue;
+                var name = pairs[i].substring(0,pos);
+                var value = pairs[i].substring(pos+1);
+                value = decodeURIComponent(value);
+                args[name] = value;
+            }
+            for (key in args){
+                div.innerHTML += "Arg: " + key +" |" + "Value: " + args[key] +"</br>";
+            }
+        }
+        urlArgs(url1);
+        urlArgs(url2);
     </script>
 </body>
 </html>
