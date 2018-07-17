@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <a href='#'>link1</a>
+        <a href='#'>link2</a>
+        <a href='#'>link3</a>
+        <span>Text1</span>
+        <span>Text2</span>
+        <span>Text3</span>
+    </div>
+    <script>
+        var links = document.getElementsByTagName('a');
+        for (var i = 0; i < document.links.length; i++){
+            document.write("<b>Link number " + i + " has these properties:</b><br/>");
+            document.write("<i>nodeName is</i> " + document.links[i].nodeName + "<br/>");
+            document.write("<i>nodeType is</i> " + document.links[i].nodeType + "<br/>");
+            document.write("<i>parentNode.nodeValue is</i> " + document.links[i].parentNode.nodeValue + "<br/>");
+            document.write("<i>firstChild is</i> " + document.links[i].firstChild  + "<br/>");
+            document.write("<i>firstChild.nodeValue is</i> " + document.links[i].firstChild.nodeValue + "<br/>");
+            document.write("<i>href is</i> " + document.links[i].href  + "<br/>");  
+        }
+
+        var x = document.getElementsByTagName("span");
+        for (var i = 0; i < x.length; i++){
+            document.write("<b>Tag span number " + i + " has these properties:</b><br/>");
+            document.write("<i>nodeName is</i> " + x[i].nodeName + "<br/>");
+            document.write("<i>nodeValue is</i> " + x[i].nodeValue + "<br/>");
+            document.write("<i>nodeType is</i> " + x[i].nodeType + "<br/>");
+            document.write("<i>id is</i> " + x[i].id + "<br/>");
+            document.write("<i>name is</i> " + x[i].name + "<br/>");
+            document.write("<i>parentNode is</i> " + x[i].parentNode + "<br/>");
+            document.write("<i>parentNode.nodeValue is</i> " + x[i].parentNode.nodeValue + "<br/>");
+            document.write("<i>firstChild is</i> " + x[i].firstChild + "<br/>");
+            document.write("<i>firstChild.nodeValue is</i> " + x[i].firstChild.nodeValue + "<br/>");
+        }
+    </script>
+</body>
+</html>
